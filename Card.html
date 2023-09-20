@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ID Card</title>
+
+  <!-- Core Css Files -->
+  <link rel="stylesheet" href="css/bootstrap_en.min.css" />
+
+  <!-- Custom css File  -->
+  <style>
+    @font-face {
+      font-family: "TheSans";
+      font-style: normal;
+      font-weight: 600;
+      src: local("TheSans Bold"), local("TheSans-Bold"),
+        url(fonts/TheSans-Bold.ttf) format("truetype");
+    }
+
+    @font-face {
+      font-family: "TheSans";
+      font-style: normal;
+      font-weight: 400;
+      src: local("TheSans Plain"), local("TheSans-Plain"),
+        url(fonts/TheSans-Plain.ttf) format("truetype");
+    }
+
+    @font-face {
+      font-family: "poppins";
+      font-style: bold;
+      font-weight: 700;
+      src: url(fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+    }
+
+    @font-face {
+      font-family: "poppins";
+      font-style: medium;
+      font-weight: 600;
+      src: url(fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+    }
+
+    @font-face {
+      font-family: "poppins";
+      font-style: normal;
+      font-weight: 400;
+      src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+    }
+
+    @font-face {
+      font-family: "poppins";
+      font-style: light;
+      font-weight: 300;
+      src: url(fonts/Poppins/Poppins-Light.ttf) format("truetype");
+    }
+
+
+
+    body {
+      font-family: "poppins" !important;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    main.content {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .card {
+      background-image: url(imgs/bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: .08in .09in;
+      border-radius: .03in;
+      border: 1px solid #cbd3d9;
+      /* width: 3.88in;
+      height: 2.63in; */
+
+      width: 3.3in;
+      height: 2.05in;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header .logo {
+      height: 0.23in;
+      width: fit-content;
+    }
+
+    .header h3 {
+      font-size: .12in;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .header .slogan {
+      text-transform: uppercase;
+      font-size: .1in;
+      /* color: #9a3030; */
+      color: #8b0000;
+      letter-spacing: 1.1px;
+      margin-top: 2px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .hilight {
+      border-top: 1px solid #d3d3d3;
+      border-bottom: 1px solid #d3d3d3;
+      text-align: center;
+      margin: .12in 0;
+      padding: .1in 0;
+    }
+
+    .hilight h5 {
+      font-size: .12in;
+      margin: 0;
+      font-weight: 600;
+      color: #3975b7;
+    }
+
+    .info {
+      display: flex;
+    }
+
+    .info .img_wrap {
+      width: .80in;
+      height: .80in;
+      overflow: hidden;
+      margin-right: .12in;
+      border-radius: .07in;
+      box-shadow: 0px 0px 10px 3px #dde2e5;
+    }
+
+    .img_wrap .user_img {
+      width: 100%;
+    }
+
+    .pers_info p {
+      margin-bottom: 0;
+      font-size: .11in;
+    }
+
+    .pers_info strong {
+      min-width: .8in;
+      display: inline-flex;
+      font-weight: 600;
+      font-size: .11in;
+    }
+
+    .passing {
+      font-size: .1in;
+      margin: 0;
+      font-weight: 600;
+      color: #3975b7;
+      margin-bottom: .05in;
+    }
+
+    .passing_wrap {
+      display: flex;
+    }
+
+    .passing_wrap .img_wrap {
+      width: .55in;
+      height: .55in;
+      overflow: hidden;
+      margin-right: .12in;
+      border-radius: .07in;
+      box-shadow: 0px 0px 10px 3px #dde2e5;
+    }
+
+    .passing_wrap .img_wrap .user_img {
+      width: 100%;
+    }
+
+    .passing_info {
+      width: calc(100% - 0.6in);
+    }
+
+    .passing_info p {
+      margin-bottom: 0;
+      font-size: .1in;
+    }
+
+    .passing_info strong {
+      min-width: .9in;
+      display: inherit;
+      font-weight: 600;
+      font-size: .09in;
+    }
+
+    .signature {
+      max-width: 100%;
+      height: 27px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .comp_info {
+      border-top: 1px solid #d3d3d3;
+      padding-top: .05in;
+      margin-top: .05in;
+    }
+
+    .comp_info h6 {
+      font-size: .1in;
+      font-weight: 700;
+      margin-bottom: .05in;
+    }
+
+    h6 span {
+      font-family: "TheSans";
+    }
+
+    .comp_info p {
+      font-size: .1in;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .comp_info strong {
+      min-width: 0.7in;
+      display: inline-block;
+    }
+
+
+    .print_btn {
+      outline: none;
+      box-shadow: none;
+      border: none;
+      background-color: #3975b7;
+      color: #fff;
+      display: inline-flex;
+      border-radius: 5px;
+      padding: 5px 25px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    @media print {
+
+      .content {
+        display: block !important;
+      }
+
+      .print_btn {display: none;}
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      @page {
+        /* size: 3.3in 2.05in; */
+        size: 2.2in 1.38in;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="content" id="content">
+
+    <!-- Card Front -->
+    <section class="card">
+
+      <div class="header">
+        <div>
+          <h3>Engineering Zone CO. LTD.</h3>
+          <p class="slogan">Quality is our Integrity</p>
+        </div>
+        <img src="imgs/logo_icon.svg" alt="" class="logo">
+      </div>
+      <div class="hilight">
+        <h5>RIGGER LEVEL III <br> TRAINING AND CERTIFICATION DIVISION</h5>
+      </div>
+      <div class="info">
+        <div class="img_wrap">
+          <img src="imgs/user_img.svg" class="user_img">
+        </div>
+        <div class="pers_info">
+          <p><strong>BABLU PRASAD</strong> </p>
+          <p><strong>Passport No</strong> T1926780</p>
+          <p><strong>JUB</strong> 20211128-2439</p>
+          <p><strong>Issue Date</strong> 14-May-2023</p>
+          <p><strong>EXP Date</strong> 13-May-2024</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Card Back -->
+    <section class="card">
+
+      <h5 class="passing">This candidate has been successfully passed the following assesment course</h5>
+      <div class="passing_wrap">
+        <div class="img_wrap">
+          <img src="imgs/qr.svg" class="user_img">
+        </div>
+        <div class="passing_info">
+          <div class="row">
+            <div class="col-12">
+              <strong>Company Name:</strong>
+              <p>Alucor Arabia Limited Co.</p>
+            </div>
+            <div class="col-auto">
+              <strong>Certified As</strong>
+              <p>RIGGER LEVEL III</p>
+            </div>
+            <div class="col">
+              <div class="row align-items-center no-gutters">
+                <div class="col-6">
+                  <strong>Authorized Signatory</strong>
+                </div>
+                <div class="col-6">
+                  <img src="imgs/sig.svg" class="signature">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comp_info">
+        <h6>Engineering Zone Co.Ltd - <span>شركة منطقة الهندسة المحدودة</span></h6>
+        <p>PO Box: 7197,Office No: 10, EAPA Building <br> Al Shoula, Dammam, KSA.</p>
+        <p><strong>Contact</strong>: +966 13 868 7513</p>
+        <p><strong>Email</strong> : info@engineeringzone.com.sa</p>
+        <p><strong>Website</strong> : www.engineeringzone.com.sa</p>
+      </div>
+
+    </section>
+
+    <button type="button" onclick="window.print()" class="print_btn"> طباعة </button>
+
+  </main>
+
+
+
+</body>
+
+</html>
