@@ -79,7 +79,7 @@
     }
 
     .card {
-      background-image: url(imgs/bg.png);
+      background-image: url(imgs/bg.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       padding: .08in .09in;
@@ -257,24 +257,107 @@
         display: block !important;
       }
 
-    .card {
-      width: 3.3in;
-      height: 2.03in;
-    }
+      .card {
+        border: none;
+        width: 4.97in;
+        height: 3.06in;
+        padding: 0.2in 0.2in;
+      }
 
-      .print_btn {display: none;}
+      .header .logo {
+        height: .4in;
+      }
+
+      .header h3 {
+        font-size: .18in;
+      }
+
+      .header .slogan {
+        font-size: .16in;
+        letter-spacing: 1.1px;
+        margin-top: 2px;
+      }
+
+      .hilight {
+        margin: .12in 0;
+        padding: .12in 0;
+      }
+
+      .hilight h5 {
+        font-size: .19in;
+      }
+
+      .info .img_wrap {
+        width: 1.2in;
+        height: 1.2in;
+        margin-right: .12in;
+      }
+
+      .pers_info p {
+        font-size: .16in;
+      }
+
+      .pers_info strong {
+        min-width: 1.1in;
+        font-size: .16in;
+      }
+
+      .passing {
+        font-size: .15in;
+        margin-bottom: .05in;
+      }
+
+      .passing_wrap .img_wrap {
+        width: 1in;
+        height: 1in;
+        margin-right: .12in;
+      }
+
+      .passing_info {
+        width: calc(100% - 0.6in);
+      }
+
+      .passing_info p {
+        font-size: .17in;
+      }
+
+      .passing_info strong {
+        min-width: .9in;
+        font-size: .14in;
+      }
+
+
+      .signature {
+        height: 47px;
+      }
+
+      .comp_info h6 {
+        font-size: .15in;
+      }
+
+      .comp_info p {
+        font-size: .13in;
+      }
+
+      .comp_info strong {
+        min-width: 0.7in;
+      }
+
+      .print_btn {
+        display: none;
+      }
 
       html,
       body {
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
       @page {
-        size: 3.3in 2.05in;
-        /* size: 2.2in 1.38in; */
-        margin: 0;
-        padding: 0;
+        /* size: 3.3in 2.05in; */
+        size: 84mm 52mm;
+        margin: 0 !important;
+        padding: 0 !important;
       }
     }
   </style>
