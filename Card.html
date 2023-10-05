@@ -83,7 +83,8 @@
     }
 
     .card {
-      background-image: url(imgs/bg.jpg);
+      /* background-image: url(imgs/bg.jpg); */
+      background-image: url(imgs/bg_2.png);
       background-size: cover;
       background-repeat: no-repeat;
       padding: .08in .09in;
@@ -94,7 +95,9 @@
       width: 3.3in;
       height: 2.03in;
     }
-
+    .card_back {
+      background-image: none;
+    }
     .header {
       display: flex;
       align-items: center;
@@ -171,7 +174,7 @@
       font-size: .1in;
       margin: 0;
       font-weight: 600;
-      color: rgb(57 117 183);
+      color: rgb(0 0 0);
       margin-bottom: .05in;
     }
 
@@ -225,6 +228,7 @@
       font-size: .1in;
       font-weight: 700;
       margin-bottom: .05in;
+      color: rgb(0, 0, 0);
     }
 
     h6 span {
@@ -401,7 +405,7 @@
     </section>
 
     <!-- Card Back -->
-    <section class="card">
+    <section class="card card_back">
 
       <h5 class="passing">This candidate has been successfully passed the following assesment course</h5>
       <div class="passing_wrap">
