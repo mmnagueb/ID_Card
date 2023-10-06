@@ -70,6 +70,7 @@
       margin-bottom: 5px;
       color: rgb(0 0 0);
     }
+
     strong {
       color: rgb(0 0 0);
     }
@@ -94,10 +95,13 @@
       height: 2.63in; */
       width: 3.3in;
       height: 2.03in;
+      position: relative;
     }
+
     .card_back {
       background-image: none;
     }
+
     .header {
       display: flex;
       align-items: center;
@@ -155,23 +159,19 @@
       /* box-shadow: 0px 0px 10px 3px #dde2e5; */
     }
 
-   
+
     .info .img_wrap .user_img {
       width: .80in;
       height: .80in;
-      }
-      .info .img_wrap .logos {
+    }
+
+    .logos {
       margin-top: 5px;
-        width: .80in;
-        height: auto;
-      }
+      width: .80in;
+      height: auto;
+    }
 
 
-      .info .img_wrap {
-        width: 1.2in;
-        height: 1.6in;
-        margin-right: .12in;
-      }
 
     .pers_info p {
       margin-bottom: 0;
@@ -276,6 +276,13 @@
       cursor: pointer;
     }
 
+    .logos_h {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      height: 65px;
+    }
+
     @media print {
 
       .content {
@@ -287,7 +294,7 @@
         width: 4.97in;
         height: 3.06in;
         padding: 0.15in 0.2in;
-        border-radius: 10px;
+        border-radius: 15px;
         overflow: hidden;
       }
 
@@ -319,16 +326,18 @@
 
       .info .img_wrap {
         width: 1.2in;
-        height: 1.65in;
+        height: 1.25in;
         margin-right: .12in;
       }
+
       .info .img_wrap .user_img {
         width: 1.2in;
         height: 1.26in;
         background-color: rgb(255, 255, 255);
-        border: 1px solid rgb(57 117 183);
+        /* border: 1px solid rgb(57 117 183); */
         border-radius: 5px;
       }
+
       .info .img_wrap .logos {
         margin-top: 3px;
         /* height: 0.3in; */
@@ -391,6 +400,13 @@
         display: none;
       }
 
+      .logos_h {
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      height: 95px;
+    }
+
       html,
       body {
         margin: 0 !important;
@@ -426,7 +442,6 @@
       <div class="info">
         <div class="img_wrap">
           <img src="imgs/user_img.svg" class="user_img">
-          <img src="imgs/icons_logos.png" class="logos">
         </div>
         <div class="pers_info">
           <p class="name"><strong>BABLU PRASAD</strong> </p>
@@ -436,7 +451,9 @@
           <p><strong>EXP Date</strong> 13-May-2024</p>
         </div>
       </div>
-
+      <div style="text-align: right;">
+        <img src="imgs/icons_logos.png" class="logos">
+      </div>
     </section>
 
     <!-- Card Back -->
@@ -477,6 +494,7 @@
         <p><strong>Email</strong> : info@engineeringzone.com.sa</p>
         <p><strong>Website</strong> : www.engineeringzone.com.sa</p>
       </div>
+      <img src="imgs/icons_logos_h.png" class="logos_h">
 
     </section>
 
