@@ -84,7 +84,8 @@
     }
 
     .card {
-      background-image: url(imgs/bg.jpg);
+      background-image: url(imgs/bg_new.svg);
+      /* background-image: url(imgs/bg.jpg); */
       /* background-image: url(imgs/bg_2.png); */
       background-size: cover;
       background-repeat: no-repeat;
@@ -238,7 +239,7 @@
     }
 
     .comp_info {
-      border-top: 1px solid #d3d3d3;
+      border-top: 1px solid rgb(0, 0, 0);
       padding-top: .05in;
       margin-top: .05in;
     }
@@ -284,6 +285,19 @@
       right: 10px;
       bottom: 10px;
       height: 65px;
+    }
+
+    .signature_wrap {
+      border-left: 1px solid #333;
+      padding-left: .1in;
+      height: 100%;
+    }
+
+    .signature_wrap strong {
+      display: inherit;
+      font-weight: 700;
+      font-size: .13in;
+      margin-bottom: 5px;
     }
 
     @media print {
@@ -365,28 +379,27 @@
         margin-bottom: .05in;
       }
 
-      .passing_wrap .img_wrap {
-        width: 1in;
-        height: 1in;
-        margin-right: .12in;
-      }
-
       .passing_info {
-        width: calc(100% - 0.6in);
+        width: calc(100% - 1.13in);
       }
-
-      .passing_info p {
-        font-size: .17in;
+      .passing_wrap .img_wrap {
+        width: 1.13in;
+        height: 1.13in;
+        margin-right: .12in;
       }
 
       .passing_info strong {
         min-width: .9in;
         font-size: .14in;
+        font-weight: 700;
       }
 
+      .passing_info p {
+        font-size: .15in;
+      }
 
       .signature {
-        height: 47px;
+        height: 60px;
       }
 
       .comp_info h6 {
@@ -406,11 +419,11 @@
       }
 
       .logos_h {
-      position: absolute;
-      right: 20px;
-      bottom: 10px;
-      height: 95px;
-    }
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        height: 95px;
+      }
 
       html,
       body {
@@ -470,36 +483,33 @@
           <img src="imgs/qr.svg" class="user_img">
         </div>
         <div class="passing_info">
-          <div class="row">
-            <div class="col-12">
-              <strong>Company Name:</strong>
-              <p>Alucor Arabia Limited Co.</p>
-            </div>
-            <div class="col-auto">
-              <strong>Certified As</strong>
-              <p>RIGGER LEVEL III</p>
-            </div>
-            <div class="col">
-              <div class="row align-items-center no-gutters">
-                <div class="col-6">
-                  <strong>Authorized Signatory</strong>
-                </div>
-                <div class="col-6">
-                  <img src="imgs/sig.svg" class="signature">
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <strong>Company Name:</strong>
+          <p>Alucor Arabia Limited Co.</p>
+
+          <strong>Certified As</strong>
+          <p>RIGGER LEVEL III / RIGGER LEVEL III / RIGGER LEVEL III / RIGGER LEVEL III</p>
+
         </div>
       </div>
       <div class="comp_info">
         <h6>Engineering Zone Co.Ltd - <span>شركة منطقة الهندسة المحدودة</span></h6>
-        <p>PO Box: 7197,Office No: 10, EAPA Building <br> Al Shoula, Dammam, KSA.</p>
-        <p><strong>Contact</strong>: +966 13 868 7513</p>
-        <p><strong>Email</strong> : info@engineeringzone.com.sa</p>
-        <p><strong>Website</strong> : www.engineeringzone.com.sa</p>
+        <div class="row no-gutters">
+          <div class="col">
+            <p>PO Box: 7197,Office No: 10, EAPA Building <br> Al Shoula, Dammam, KSA.</p>
+            <p><strong>Contact</strong>: +966 13 868 7513</p>
+            <p><strong>Email</strong> : info@engineeringzone.com.sa</p>
+            <p><strong>Website</strong> : www.engineeringzone.com.sa</p>
+          </div>
+          <div class="col-auto">
+            <div class="signature_wrap">
+              <strong>Authorized Signatory</strong>
+              <img src="imgs/sig.svg" class="signature">
+            </div>
+          </div>
+        </div>
+
       </div>
-      <!-- <img src="imgs/icons_logos_h.png" class="logos_h"> -->
 
     </section>
 
